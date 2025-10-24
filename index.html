@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Skill Inventory</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Team Skill Inventory</h1>
+
+    
+    <div class="form-section">
+      <h2>Add New Member</h2>
+      <form id="skillForm">
+        <input type="text" id="name" placeholder="Member Name" required />
+        <input type="text" id="skill" placeholder="Skill (e.g., JavaScript)" required />
+        <select id="level" required>
+          <option value="">Proficiency Level</option>
+          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Advanced</option>
+        </select>
+        <button type="submit">Add Member</button>
+      </form>
+    </div>
+
+  
+    <div class="search-section">
+      <h2>Search Skills</h2>
+      <input type="text" id="search" placeholder="Search skill..." />
+    </div>
+
+    <div class="table-section">
+      <h2>Team Members</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Skill</th>
+            <th>Level</th>
+              <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="memberList"></tbody>
+      </table>
+    </div>
+    <div class="chart-section">
+      <h2>Skill Distribution</h2>
+      <canvas id="skillChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
